@@ -15,6 +15,7 @@ const Data = new mongoose.Schema({
   t10: { type: Number, required: true },
   t11: { type: Number, required: true },
   t12: { type: Number, required: true },
+  arr: { type: Array(Number), required: true },
 });
 
 export default mongoose.model('Data', Data);

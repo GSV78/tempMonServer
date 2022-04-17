@@ -4,6 +4,7 @@ class DataController {
   async create(req, res) {
     try {
       const data = await DataService.create(req.body);
+
       res.json(data);
     } catch (error) {
       res.status(500).json(error.message);

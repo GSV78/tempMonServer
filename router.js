@@ -1,9 +1,15 @@
 import Router from 'express';
 import DataController from './DataController.js';
+import cors from 'cors';
 
 const router = new Router();
 
-router.post('/tempData', DataController.create);
+router.options('/tempData', cors());
+router.head('/tempData', cors(), (req, res) => {
+  console.info('HEAD /simple-cors');
+  res.sendStatus(204);
+});
+router.post('/tempData', cors(), DataController.create);
 router.get('/tempData', DataController.getAll);
 router.get('/tempData/:day', DataController.getOneDay);
 // router.put('/posts', PostController.update);
