@@ -7,10 +7,10 @@ class DataService {
     return createdData;
   }
 
-  async getAll() {
-    const datas = await Data.find();
-    return datas;
-  }
+  // async getAll() {
+  //   const datas = await Data.find();
+  //   return datas;
+  // }
 
   async getOneDay(day) {
     if (!day) {

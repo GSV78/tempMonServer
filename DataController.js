@@ -4,21 +4,20 @@ class DataController {
   async create(req, res) {
     try {
       const data = await DataService.create(req.body);
-
       res.json(data);
     } catch (error) {
       res.status(500).json(error.message);
     }
   }
 
-  async getAll(req, res) {
-    try {
-      const datas = await DataService.getAll();
-      return res.json(datas);
-    } catch (error) {
-      res.status(500).json(error);
-    }
-  }
+  // async getAll(req, res) {
+  //   try {
+  //     const datas = await DataService.getAll();
+  //     return res.json(datas);
+  //   } catch (error) {
+  //     res.status(500).json(error);
+  //   }
+  // }
 
   async getOneDay(req, res) {
     try {
