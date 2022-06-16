@@ -23,7 +23,8 @@ async function startApp() {
   }
 }
 app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'static', 'index.html'));
+  // res.sendFile(path.resolve(__dirname, 'static', 'index.html'));
+  res.redirect('http://localhost:3000');
 });
 
 startApp();
